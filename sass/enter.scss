@@ -1,0 +1,192 @@
+@charset "utf-8";
+@import 'base';
+@mixin Disper{
+    display: inline-block;
+}
+$fontColor:#444;
+$bgColor:#f7f9f8;
+$green:#008842;
+html,body{
+    width:100%;
+    height:100%;
+    background:#f7f8f8;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+    color:$fontColor;
+    @include Disper;
+}
+i,s{
+    display:inline-block;
+    vertical-align: middle;
+}
+img{
+    vertical-align:bottom;
+    border:none;
+}
+input{
+    outline: none;
+}
+.all{
+    width:100%;
+    .head{
+        border: none;
+        background: #e0e0e0;
+        .header{
+            width:1200px;
+            margin:0 auto;
+            padding:15px 0 5px 0;
+            overflow: hidden;
+            .logo{
+                float:left;
+                a{
+                    width:145px;
+                    height:50px;
+                    background:url(../img/logo.png) no-repeat center;
+                    float:left;
+                }
+                span{
+                    float:left;
+                    line-height:50px;
+                    display:inline-block;
+                    font-size:28px;
+                    color: #008842;
+                    margin-left:120px;
+                }
+            }
+        }
+    }
+    .enter{
+        width:1200px;
+        margin:0 auto;
+        padding-top:50px;
+        height:800px;
+        .enter_left{
+            width:666px;
+            height:441px;
+            float:left;
+        }
+        .enter_right{
+            float:right;
+            width:308px;
+            height:379px;
+            padding:30px 20px 20px;
+            margin-right:105px;
+            border:1px solid #e3e6e0;
+            .enter_title{
+                margin-bottom:20px;
+                p{
+                    strong{
+                        color: #262626;
+                        font: 18px/1 "Microsoft YaHei";
+                    }
+                    span{
+                        float:right;
+                        color:#878787;
+                        a{
+                            color:#008842;
+                            text-decoration:underline;
+                        }
+                    }
+                }
+            }
+            .enter_user{
+                p{  
+                    // height:40px;
+                    margin-bottom:20px;
+                    overflow:hidden;
+                    label{
+                        width:38px;
+                        height:36px;
+                        border:1px solid #c1c1c1;
+                        background:url(../img/bg_input.png) no-repeat 0  -120px;
+                        float:left;
+                    }
+                    input{
+                        float:left;
+                        width:265px;
+                        height:36px;
+                        border:1px solid #c1c1c1;
+                        border-left:0;
+                        text-indent:20px;
+                        font-size:14px;
+                        color:#777777;
+                    }
+                }
+                #key{
+                    label{
+                        background-position:0 -180px;
+                    }
+                }
+                #code{
+                    input{
+                        width:112px;
+                    }
+                    span{
+                        float:left;
+                        width:80px;
+                        line-height:30px;
+                        margin:3px 8px 0 5px;
+                        border:1px solid #ccc;
+                        text-align: center;
+                        color:red;
+                        font-size:18px;
+                    }
+                    a{
+                        float:left;
+                        text-decoration: underline;
+                        color:#878787;
+                        margin-top:10px;
+                    }
+                }
+                #auto{
+                    input{
+                        width:15px;height:15px;
+                    }
+                   b{
+                       margin:10px;
+                       font-weight:normal;
+                       color:#878787;
+                   }
+                   a{
+                       float:right;
+                       color:#878787;
+                   }
+                }
+                #register{
+                    background:#008842;
+                    a{
+                        display: block;
+                        width:306px;
+                        height:50px;
+                        text-align: center;
+                        color:#fff;
+                        font: 18px/50px "Microsoft YaHei";
+                    }
+                }
+                .third-party{
+                    color:#878787;
+                }
+                #p-code-btn{
+                    a{
+                        // display:inline-block;
+                        width:88px;
+                        height:20px;
+                        margin-right:20px;
+                        background:url(../img/bg_login.png) no-repeat -60px -200px;
+                        &:nth-child(2){
+                            background-position:-160px -200px;
+                        }
+                        &:last-child{
+                            width:57px;
+                            background-position:-260px -200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
