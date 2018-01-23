@@ -1,21 +1,8 @@
 $(function(){
     // -----------------购物车--------------------
-    $('#shop').mouseenter(function(){
-        $('#shopList').fadeIn(1000, function () {
-            $(this).css('display','block');
-        })
-    })
-    $('#shop').mouseleave(function(){
-        let iTimer = setTimeout(function(){
-            $('#shopList').fadeOut(1000, function () {
-                $(this).css('display', 'none');
-            })
-        },1000)
-    })
+    // shopResult();
 // ------------------下拉菜单-------------------
-    $('#cataBtn').click(function(){
-        $('#pull_down').toggle();
-    })
+    // menu();
     
 // ------------------轮播图---------------------
     // $('#btnm').click(function(){
@@ -33,37 +20,45 @@ $(function(){
     //     let floorT =  $(this).offset().top;
     //     console.log(docTop,floorT)
     //     if ($(document).scrollTop() > $(this).offset().top && $(document).scrollTop() < $(this).last().offset().top){
-    //         $('#guides').find('em').css({'opacity':1});
-    //     }
-    // })
-    $(window).scroll(function (event) {
-        let docTop = $(document).scrollTop();
-        let floorT = $('.floor').offset().top;
-        console.log($('.floor'));
-        $('.floor').each(function(i){
-            console.log(i)
-            if (docTop > 800){
-                $('#guides').css({'display':'block'});
-            } else {
-                $('#guides').css({ 'display': 'none' });
-            }
-            if (docTop >= $('.floor').eq(i).offset().top-200 && docTop < $('.floor').eq(i+1).offset().top-200){
-                $('#guides li').eq(i).find('em').css({ 'opacity': 1 });
-            } else {
-                $('#guides li').eq(i).find('em').css({ 'opacity': 0 });
-            }
-        })
+        //         $('#guides').find('em').css({'opacity':1});
+        //     }
+        // })
+        let floorIndex = 0;
+        $(window).scroll(function (event) {
+            let docTop = $(document).scrollTop();
+        // console.log($('.floor'));
+            $('.floor').each(function(i){
+                // console.log(i)
+                if (docTop > 800){
+                    $('#guides').css({'display':'block'});
+                } else {
+                    $('#guides').css({ 'display': 'none' });
+                }
+                // floorIndex = i >= $('.floor').length ? $('.floor').length - 1 : i;
+                if (docTop >= $('.floor').eq(i).offset().top - 500){
+                    $('#guides li').eq(i).find('em').css({ 'opacity': 1 }).end().siblings().find('em').css({ 'opacity': 0 });
+                    return;
+                }
+            })
+            
+            // if (docTop >100){
+            //     $('#stick a').eq(1).css({ 'display': 'block' });
+            // } else {
+            //     $('#stick a').eq(1).css({ 'display': 'none' });
+            // }
         
-        if (docTop >100){
-            $('#stick a').eq(1).css({ 'display': 'block' });
-        } else {
-            $('#stick a').eq(1).css({ 'display': 'none' });
-        }
-        $('#stick a').eq(1).click(function(){
-            $(document).scrollTop(0);
-        })
-    });
-})
+        
+            // if(docTop > 100){
+            //     $('.head').eq(0).addClass('header_fix');
+            // } else if (docTop > 10){
+            //     $('.head').eq(0).removeClass('header_fix');
+            // }
+        });
+        // $('#stick a').eq(1).click(function(){
+        //     $('html').animate({'scrollTop':0});
+        //     $('body').animate({'scrollTop':0});
+        // })
+    })
 // 定义一个类
 // 类的属性
 // var SlideShow = function(obj){
