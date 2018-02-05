@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车-易果网</title>
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+</head>
+<body>
+    <div class="all">
+        <!-- --------------------------顶部工具栏------------------------------- -->
+        <div class="tops">
+            <div class="top">
+                <!-- --------------------------工具栏左侧------------------------------- -->
+                <ul class="top_left">
+                    <li>欢迎光临易果生鲜！</li>
+                </ul>
+                <!-- --------------------------工具栏右侧------------------------------- -->
+                <ul class="top_right">
+                    <li>
+                        <a href="enter.html" id="username">[登录]</a>
+                    </li>
+                    <li>
+                        <a href="register.html" id="userhi">[注册]</a>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;" class="menu">
+                                    <i></i>我的易果
+                                    <s></s>
+                                </a>
+                            </dt>
+                            <dd>
+                                <a href="javascript:;">我的订单</a>
+                                <a href="javascript:;">我的优惠券
+                                    <b id="coupon">0</b>
+                                </a>
+                                <a href="javascript:;">我的收藏</a>
+                                <a href="javascript:;">我的悠币</a>
+                                <a href="javascript:;">我的退换货</a>
+                                <a href="javascript:;">预存款查询</a>
+                                <a href="javascript:;">立即充值</a>
+                                <a href="javascript:;">退出</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;" class="menu">
+                                    <i></i>手机易果
+                                    <s></s>
+                                </a>
+                            </dt>
+                            <dd>
+                                <div>
+                                    <img src="../img/qrcode_app.jpg">
+                                    <span>扫一扫下载APP</span>
+                                </div>
+                                <div>
+                                    <img src="../img/qrcode_app.jpg">
+                                    <span>易果生鲜微信</span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i></i>储值卡</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i></i>提货劵入口</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ---------------------------头部------------------------- -->
+        <div class="head">
+            <div class="header">
+                <div class="logo">
+                    <a href="../index.html"></a>
+                </div>
+                <div class="step">
+                    <ul>
+                        <li>
+                            <p>我的购物车</p>
+                            <b></b>
+                        </li>
+                        <li>
+                            <p>填写订单信息</p>
+                            <i></i>
+                            <b></b>
+                        </li>
+                        <li>
+                            <p>成功提交订单</p>
+                            <i></i>
+                            <b></b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------购物车------------------------------ -->
+        <div class="cart">
+            <div class="cart_none">
+                <p>
+                  <span>购物车是空的，去买点东西吧！</span>
+                  <a href="javascript:;">继续逛逛>></a>
+                </p>
+            </div>
+        </div>
+        <div class="cart_alert">
+            <h2>
+                <i></i>
+                <li class="site">
+                    <div class="city">配送至：</div>
+                    <dl class="city_tit">
+                        <dt class="city_name">北京</dt>
+                        <dd class="city_con">
+                            <div class="title">
+                                请根据您的收货地址选择
+                                <a href="javascript:;">全国其它城市>></a>
+                            </div>
+                        </dd>
+                    </dl>
+                </li>
+                <a href="list.html" class="shop_go">继续购物>></a>
+            </h2>
+            <div class="cart_content">
+                <ul class="cart_head">
+                    <li class="itemize1"><input type="checkbox" class="selectall"><label>全选</label></li>
+                    <li class="itemize2">商品信息</li>
+                    <li class="itemize3">悠币</li>
+                    <li class="itemize4">单价</li>
+                    <li class="itemize5">购买数量</li>
+                    <li class="itemize6">合计</li>
+                    <li class="itemize7">规格</li>
+                    <li class="itemize8">操作</li>
+                </ul>
+                <div class="center" id="centers">
+                    <!-- ????????????? -->
+                </div>
+                <div class="cart_floor">
+                    <div class="cart_floor_left">
+                        <!-- <p><input type="checkbox" class="selectall"><label>全选</label></p> -->
+                        <a href="javascript:;" id="delMore">删除选中的商品</a>
+                        <a href="javascript:;" id="delAll">清空购物车</a>
+                    </div>
+                    <div class="cart_floor_right">
+                        <span class="ub">悠币：<b>0</b> 个</span>
+                        <span class="zj">总价：<b id="countAll">￥0</b></span>
+                        <span class="js"><a href="javascript:">去结算</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------楼底导航-------------------------- -->
+        <div class="footer">
+            <div class="gps">
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                        <a href="javascript:;">账户注册</a>
+                    </dd>
+                </dl>
+                <div class="phone">
+                    <span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span>
+                    <span>周一至周日 9:00-21:00</span>
+                </div>
+                <div class="copyright">
+                    <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                    <p>
+                        <a href="javascript:;">沪ICP备09008015号</a>
+                        Copyright © 2005-2018
+                        <a href="javascript:;">上海易果电子商务有限公司</a>
+                        版权所有
+                    </p>
+                    <p>
+                        <a href="javascript:;">
+                            <img src="../img/153685368061665897_121x29.png" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/2517491005058doc.png" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/footer_copy.gif" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/ghs.png" alt="">
+                            <span>沪公网安备 31010502000002号</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../js/JQuery.js"></script>
+<script type="text/javascript" src="../js/cookie.js"></script>
+
+
+<script>
+    $(function () {
+        // 读取cookie获取用户名
+        let username = JSON.parse(getCookie('vipuser'));
+        if (username) {
+            $('#username').html(username);
+            $('#userhi').html('欢迎回来');
+        }
+
+        //从后台获取数据
+        $.ajax({
+            type: 'get',
+            url: '../php/getShoppingCart.php',
+           dataType: 'json',
+            data: {'vipName':getCookie('vipuser')},
+            success: function (data) {
+                isNull(data);
+                newShop(data);
+                number();
+                countAll();
+                delMore();
+                delAll();
+                $(".selectall").checkRelation($(".center :checkbox"));
+                $('.add').each(function (i) {
+                    $(this).click(function () {
+                        let num = $('.num').eq(i).val();
+                        num++;
+                        $('.num').eq(i).val(num);
+                        number();
+                        count(i,num);
+                        // shopNum($(this), num);
+                        countAll() 
+                        console.log($(this).parent().parent())
+                        $.ajax({
+                            type: 'GET',
+                            url: '../php/updateGoodsCount.php',
+                            data: { 'vipName': getCookie('vipuser'), 'goodsId': $(this).parent().parent().attr('goodsId'), 'goodsCount': num },
+                            success: function (t) {
+                                if (t == 0) {
+                                    alert('数量保存失败');
+                                }
+                            }
+                        })                     
+                    })
+                })
+                $('.minus').each(function (i) {
+                    $(this).click(() => {
+                        let num = $('.num').eq(i).val();
+                        num--;
+                        $('.num').eq(i).val(num);
+                        console.log($(this))
+                        number();
+                        count(i,num);
+                        // shopNum($(this),num);
+                        countAll()
+                        $.ajax({
+                            type: 'GET',
+                            url: '../php/updateGoodsCount.php',
+                            data: { 'vipName': getCookie('vipuser'), 'goodsId': $(this).parent().parent().attr('goodsId'), 'goodsCount': num },
+                            success: function (t) {
+                                if (t == 0) {
+                                    alert('数量保存失败');
+                                }
+                            }
+                        })
+                    })
+                })
+                delDom();
+                //全选
+                $('.selectall').click(function(){
+                    countAll();
+                })
+                $(".center :checkbox").each(function(i){
+                    $(this).click(function(){
+                        if(this.checked == true){
+                            countAll();
+                        }
+                    })
+                })
+                
+
+                let allNum = 0;
+                for(let i=0;i<data.length;i++){
+                    allNum += Number(data[i].goodsCount);
+                }
+                console.log(allNum)
+
+
+
+
+            }
+        })
+
+        
+    })
+    
+
+    // 全选 功能
+    //jQuery插件
+    jQuery.fn.extend({
+        //全选
+        // 点击全选按钮，遍历所有的checkbox
+        "checkAll": function (isChecked) {
+            //遍历   选择所有的checkbox
+            this.each(function () {
+                this.checked = isChecked;
+            });
+        },
+
+        //所有的checkbox 与 全选按钮的联动
+        //父与子的关系
+        "checkRelation": function ($sub) {
+            $parent = this;//定义父亲
+            //1.父控制子
+            //1）点击父亲的时候，儿子全选
+            this.click(function () {
+                $sub.checkAll($parent[0].checked);//根据父元素的状态 改变自己的状态
+            });
+            //2.子控制父
+            $sub.click(function () {
+                //遍历所有的子复选框
+                let isChecked = true;
+                $sub.each(function () {
+                    if (this.checked == false) {
+                        isChecked = false;
+                    }
+                });
+                $parent[0].checked = isChecked;
+            });
+            //不是在点击的时候，让子控制父。当子复选框的checked状态发生变化时，子控制父。
+
+        }
+    });
+
+    // 判定购物车商品数是否为0
+    function isNull(data){
+        if (data.length > 0) {
+            $('.cart').css({ 'display': 'none' })
+            $('.cart_alert').css({ 'display': 'block' })
+        } else {
+            $('.cart').css({ 'display': 'block' })
+        }
+    }
+
+
+    // 多选删除
+    function delMore(data){
+        $('#delMore').click(function(){
+            for(let i=0;i< $(".selectodd:checked").length;i++){
+                $.ajax({
+                    type: 'GET',
+                    url: '../php/deleteGoods.php',
+                    data: { 'vipName': getCookie('vipuser'), 'goodsId': $(".selectodd:checked").parent().parent().eq(i).attr('goodsId') },
+                    success: function (t) {
+                        if (t = 1) {
+                            alert('删除成功');
+                            $(".selectodd:checked").parent().parent().remove();
+                        } else {
+                            alert('删除失败');
+                        }
+                    }
+                })
+            }
+        })
+    }
+
+    //删除全部商品
+    function delAll(){
+        $('#delAll').click(function () {
+            $('.chanpin').remove();
+            $.ajax({
+                type: 'GET',
+                url: '../php/deleteAllGoods.php',
+                data: { 'vipName': getCookie('vipuser')},
+                success: function (t) {
+                    if (t = 1) {
+                        alert('删除成功');
+                    } else {
+                        alert('删除失败');
+                    }
+                }
+            })
+        })
+    }
+   
+
+    // 判定商品数量函数
+    function number() {
+        $('.num').each(function (i) {
+            if ($('.num').eq(i).val() <= 1) {
+                $('.minus').eq(i).attr('disabled', 'disabled').css({ 'color': '#ccc' });
+            } else {
+                $('.minus').eq(i).removeAttr("disabled").css({ 'color': '#444' });
+            }
+        })
+    }
+
+    // 单个商品的总金额
+    function count(i,num){
+        let priceA = $('.PriceA').eq(i).html();
+        $('.PriceAll').eq(i).html(num * priceA);
+        countAll()
+    }
+    
+    // 所有商品的总金额
+    function countAll(){
+        let all = 0;
+        $('.center :checkbox').each(function(i){
+            if(this.checked == true){
+                all += Number($('.PriceAll').eq(i).html());
+            }
+        })
+        // $('.PriceAll').each(function(i){
+        //     all+=Number($('.PriceAll').eq(i).html());
+        // })
+        $('#countAll').html('￥' + all);
+    }
+
+    // 删除商品
+    function delDom(){
+        $('.del').each(function(i){
+            $(this).click(function(i){
+                $(this).parent().parent().remove();
+                $.ajax({
+                    type:'GET',
+                    url:'../php/deleteGoods.php',
+                    data: { 'vipName': getCookie('vipuser'), 'goodsId': $(this).parent().parent().attr('goodsId') },
+                    success: function (t) {
+                        if (t = 1) {
+                            alert('删除成功');
+                        } else {
+                            alert('删除失败');
+                        }
+                    }
+                })
+            })
+        })
+    }
+    
+
+    // 生成购物车商品
+    function newShop(datas){
+        for(let i=0;i<datas.length;i++){
+            new ShopList({
+                'boxDom':$('#centers'),
+                'shopImg':datas[i].goodsImg,
+                'shopName':datas[i].goodsName,
+                'shopPrice':datas[i].goodsPrice,
+                'shopNum' : datas[i].goodsCount,
+                'shopClass':datas[i].goodsType,
+                'shopId'   :datas[i].goodsId
+            })
+        }
+    }
+
+    
+
+
+    // 购物车商品的类
+    let ShopList = function(obj){
+        this.boxDom = obj.boxDom;
+
+        this.shopImg  = obj.shopImg;
+        this.shopName = obj.shopName;
+        // this.shopYB   = obj.shopYB;
+        this.shopPrice= obj.shopPrice;
+        this.shopNum  = obj.shopNum;
+        this.shopClass= obj.shopClass;
+        this.shopId   = obj.shopId;
+
+        this.initUI();
+    }
+    ShopList.prototype.initUI = function(){
+        // 生成购物车的商品
+        let newUL = `
+            <ul class="chanpin" goodsId=`+ this.shopId +`>
+                    <li class="lb1"><input type="checkbox" class="selectodd"><img src="../img/`+ this.shopImg +`"></li>
+                    <li class="lb2"><a href="javascript:;">`+ this.shopName +`</a></li>
+                    <li class="lb3"></li>
+                    <li class="lb4">￥<span class="PriceA">`+ this.shopPrice +`</span></li>
+                    <li class="lb5">
+                        <input type="button" value="-" class="minus">
+                        <input type="text" value="`+ this.shopNum +`" class="num">
+                        <input type="button" value="+" class="add">
+                    </li>
+                    <li class="lb6">￥<span class="PriceAll">`+ this.shopPrice * this.shopNum +`</span></li>
+                    <li class="lb7">`+ this.shopClass +`</li>
+                    <li class="lb8"><a href="javascript:;">移入收藏</a><a href="javascript:;" class="del">删除</a></li>
+                </ul>
+        `;
+        this.boxDom.append(newUL)
+    }
+
+   
+</script>
+
+
+
